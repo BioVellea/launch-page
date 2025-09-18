@@ -396,69 +396,129 @@
         /* Mobile */
         @media (max-width: 500px) {
             body {
-                padding: 15px;
+                padding: 10px;
             }
             
             .main-container {
-                padding: 25px 20px;
-                margin: 0;
-                background: rgba(255, 255, 255, 0.9);
+                padding: 20px 18px;
+                margin: 10px 0;
+                background: rgba(255, 255, 255, 0.8);
+                max-width: 90%;
             }
             
             .logo {
-                width: 160px;
+                width: 150px;
+                margin-bottom: 25px;
             }
             
-            /* Move capsules to be visible on mobile */
+            .hero {
+                margin-bottom: 25px;
+            }
+            
+            .headline {
+                font-size: clamp(2rem, 6vw, 2.5rem);
+                margin-bottom: 15px;
+            }
+            
+            .subtitle {
+                font-size: 1.1rem;
+                margin-bottom: 12px;
+            }
+            
+            .description {
+                font-size: 0.9rem;
+                margin-bottom: 12px;
+            }
+            
+            .new-badge {
+                padding: 6px 14px;
+                font-size: 0.8rem;
+                margin-top: 8px;
+            }
+            
+            .email-section {
+                margin-bottom: 20px;
+            }
+            
+            .email-input {
+                padding: 14px 18px;
+                margin-bottom: 15px;
+                font-size: 0.9rem;
+            }
+            
+            .cta-button {
+                padding: 14px 20px;
+                font-size: 0.9rem;
+            }
+            
+            .form-note {
+                font-size: 0.8rem;
+                margin-top: 12px;
+            }
+            
+            .footer {
+                margin-top: 20px;
+            }
+            
+            .footer-text {
+                font-size: 0.75rem;
+            }
+            
+            /* Enhanced mobile capsules */
             .luxury-capsule-left {
-                top: 5%;
-                left: 2%;
-                width: 60px;
-                height: 200px;
-                opacity: 0.3;
+                top: 8%;
+                left: 5%;
+                width: 50px;
+                height: 180px;
+                opacity: 0.4;
             }
             
             .luxury-capsule-right {
-                top: 60%;
-                right: 2%;
-                width: 50px;
-                height: 150px;
-                opacity: 0.25;
+                top: 65%;
+                right: 5%;
+                width: 45px;
+                height: 140px;
+                opacity: 0.35;
             }
             
             .premium-capsule {
-                width: 25px;
-                height: 60px;
-                border-radius: 12px;
-                margin: 10px auto;
+                width: 22px;
+                height: 55px;
+                border-radius: 11px;
+                margin: 8px auto;
             }
             
             .luxury-capsule-right .premium-capsule {
-                width: 22px;
-                height: 50px;
+                width: 20px;
+                height: 45px;
             }
             
-            /* Add mobile-specific capsule in center */
+            /* Mobile-specific capsule - more visible */
             .mobile-capsule {
                 position: absolute;
-                top: 25%;
-                right: 5%;
-                width: 35px;
-                height: 80px;
-                opacity: 0.2;
+                top: 35%;
+                right: 8%;
+                width: 30px;
+                height: 70px;
+                opacity: 0.3;
                 z-index: 1;
                 display: block;
             }
             
             .mobile-capsule .premium-capsule {
-                width: 35px;
-                height: 80px;
-                transform: rotate(-8deg);
+                width: 30px;
+                height: 70px;
+                transform: rotate(-12deg);
             }
             
             /* Reduce golden rain on mobile */
-            .gold-drop:nth-child(n+5) {
+            .gold-drop:nth-child(n+4) {
                 display: none;
+            }
+            
+            .gold-drop {
+                width: 4px;
+                height: 4px;
             }
         }
 
