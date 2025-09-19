@@ -173,83 +173,88 @@
             backdrop-filter: blur(15px);
             box-shadow: 0 15px 40px rgba(172, 146, 82, 0.15);
             border: 1px solid rgba(255, 255, 255, 0.3);
-            min-height: auto;
+            /* Fixed height to prevent stretching */
+            min-height: 580px;
+            max-height: 650px;
         }
 
-        /* Logo */
+        /* Logo - Fixed sizing */
         .logo {
-    width: 180px;       /* makes it bigger */
-    max-width: 100%;     /* ensures it fits on small screens */
-    height: auto;       /* keeps aspect ratio */
-    margin: 0 auto 30px;
-    display: block;
-    animation: fadeInDown 1s ease-out;
-}
+            width: 140px;        /* Reduced from 180px */
+            height: 60px;        /* Fixed height to prevent stretching */
+            max-width: 100%;
+            object-fit: contain;  /* Keeps aspect ratio, prevents distortion */
+            margin: 0 auto 25px; /* Reduced bottom margin */
+            display: block;
+            flex-shrink: 0;      /* Prevents logo from shrinking */
+            animation: fadeInDown 1s ease-out;
+        }
 
-
-        /* Hero */
+        /* Hero - Adjusted spacing */
         .hero {
-            margin-bottom: 35px;
+            margin-bottom: 30px;  /* Reduced from 35px */
+            flex-shrink: 0;
             animation: fadeInUp 1s ease-out 0.3s both;
         }
 
         .headline {
-            font-size: clamp(2.4rem, 6vw, 3.2rem);
+            font-size: clamp(2.2rem, 5.5vw, 2.8rem); /* Slightly smaller */
             font-weight: 200;
             color: #333333;
-            margin-bottom: 20px;
-            letter-spacing: 3px;
+            margin-bottom: 18px;  /* Reduced from 20px */
+            letter-spacing: 2px;  /* Reduced from 3px */
             line-height: 1.1;
             white-space: nowrap;
         }
 
         .subtitle {
-            font-size: 1.2rem;
+            font-size: 1.1rem;   /* Slightly smaller */
             color: #ac9252;
             font-style: italic;
-            margin-bottom: 15px;
+            margin-bottom: 12px; /* Reduced from 15px */
             font-weight: 300;
         }
 
         .description {
-            font-size: 1rem;
+            font-size: 0.95rem;  /* Slightly smaller */
             color: #666;
-            margin-bottom: 15px;
+            margin-bottom: 12px; /* Reduced from 15px */
             font-weight: 300;
         }
 
         .new-badge {
             display: inline-block;
             color: #ac9252;
-            font-size: 0.9rem;
+            font-size: 0.85rem;  /* Slightly smaller */
             font-weight: 500;
             letter-spacing: 2px;
             text-transform: uppercase;
             border: 1px solid #ac9252;
-            padding: 8px 16px;
+            padding: 6px 14px;   /* Reduced padding */
             border-radius: 20px;
-            margin-top: 10px;
+            margin-top: 8px;     /* Reduced from 10px */
         }
 
-        /* Email Form */
+        /* Email Form - Adjusted spacing */
         .email-section {
+            flex-shrink: 0;
             animation: fadeInUp 1s ease-out 0.6s both;
         }
 
         .email-form {
-            margin-bottom: 30px;
+            margin-bottom: 25px;  /* Reduced from 30px */
         }
 
         .email-input {
             width: 100%;
-            padding: 18px 24px;
+            padding: 16px 22px;   /* Slightly reduced */
             border: 1px solid rgba(172, 146, 82, 0.3);
             border-radius: 50px;
-            font-size: 1rem;
+            font-size: 0.95rem;   /* Slightly smaller */
             background: rgba(255, 255, 255, 0.8);
             transition: all 0.4s ease;
             color: #333333;
-            margin-bottom: 20px;
+            margin-bottom: 18px;  /* Reduced from 20px */
             text-align: center;
             font-family: inherit;
         }
@@ -268,12 +273,12 @@
 
         .cta-button {
             width: 100%;
-            padding: 18px 24px;
+            padding: 16px 22px;   /* Slightly reduced */
             background: #ac9252;
             color: white;
             border: none;
             border-radius: 50px;
-            font-size: 1rem;
+            font-size: 0.95rem;   /* Slightly smaller */
             font-weight: 400;
             cursor: pointer;
             transition: all 0.4s ease;
@@ -290,19 +295,19 @@
 
         .form-note {
             color: #999;
-            font-size: 0.85rem;
+            font-size: 0.8rem;    /* Slightly smaller */
             font-style: italic;
-            margin-top: 15px;
+            margin-top: 12px;     /* Reduced from 15px */
         }
 
         /* Success Message */
         .success-message {
             display: none;
             color: #ac9252;
-            font-size: 1.1rem;
+            font-size: 1rem;      /* Slightly smaller */
             font-weight: 400;
-            margin-top: 20px;
-            padding: 20px;
+            margin-top: 18px;     /* Reduced from 20px */
+            padding: 18px;        /* Reduced from 20px */
             background: rgba(172, 146, 82, 0.1);
             border-radius: 15px;
             border: 1px solid rgba(172, 146, 82, 0.2);
@@ -310,7 +315,8 @@
 
         /* Footer */
         .footer {
-            margin-top: 25px;
+            margin-top: 20px;     /* Reduced from 25px */
+            flex-shrink: 0;
             animation: fadeInUp 1s ease-out 0.9s both;
         }
 
@@ -321,7 +327,7 @@
             color: #ac9252;
             text-decoration: none;
             transition: all 0.3s ease;
-            font-size: 1.1rem;
+            font-size: 1rem;      /* Slightly smaller */
             opacity: 0.7;
         }
 
@@ -332,7 +338,7 @@
 
         .footer-text {
             color: #999;
-            font-size: 0.85rem;
+            font-size: 0.8rem;    /* Slightly smaller */
             letter-spacing: 1px;
             margin: 0;
         }
@@ -406,64 +412,68 @@
                 margin: 10px 0;
                 background: rgba(255, 255, 255, 0.8);
                 max-width: 90%;
+                min-height: 520px;    /* Adjusted for mobile */
+                max-height: 580px;
             }
             
             .logo {
-                width: 150px;
-                margin-bottom: 25px;
+                width: 120px;         /* Smaller on mobile */
+                height: 50px;         /* Fixed height on mobile */
+                margin-bottom: 20px;  /* Reduced spacing */
             }
             
             .hero {
-                margin-bottom: 25px;
+                margin-bottom: 22px;  /* Reduced spacing */
             }
             
             .headline {
-                font-size: clamp(2rem, 6vw, 2.5rem);
-                margin-bottom: 15px;
+                font-size: clamp(1.8rem, 5vw, 2.2rem);
+                margin-bottom: 12px;
+                letter-spacing: 1px;
             }
             
             .subtitle {
-                font-size: 1.1rem;
-                margin-bottom: 12px;
+                font-size: 1rem;
+                margin-bottom: 10px;
             }
             
             .description {
-                font-size: 0.9rem;
-                margin-bottom: 12px;
+                font-size: 0.85rem;
+                margin-bottom: 10px;
             }
             
             .new-badge {
-                padding: 6px 14px;
-                font-size: 0.8rem;
-                margin-top: 8px;
+                padding: 5px 12px;
+                font-size: 0.75rem;
+                margin-top: 6px;
             }
             
             .email-section {
-                margin-bottom: 20px;
+                margin-bottom: 18px;
             }
             
             .email-input {
-                padding: 14px 18px;
-                margin-bottom: 15px;
-                font-size: 0.9rem;
+                padding: 12px 16px;
+                margin-bottom: 12px;
+                font-size: 0.85rem;
             }
             
             .cta-button {
-                padding: 14px 20px;
-                font-size: 0.9rem;
+                padding: 12px 18px;
+                font-size: 0.85rem;
             }
             
             .form-note {
-                font-size: 0.8rem;
-                margin-top: 12px;
+                font-size: 0.75rem;
+                margin-top: 10px;
             }
             
             .footer {
-                margin-top: 20px;
+                margin-top: 15px;
             }
             
             .footer-text {
-                font-size: 0.75rem;
+                font-size: 0.7rem;
             }
             
             /* Enhanced mobile capsules */
@@ -611,9 +621,3 @@
     </script>
 </body>
 </html>
-
-
-
-
-
-
