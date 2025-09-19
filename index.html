@@ -180,11 +180,11 @@
 
         /* Logo - Fixed sizing */
         .logo {
-            width: 140px;        /* Reduced from 180px */
-            height: 60px;        /* Fixed height to prevent stretching */
+            width: 230px;        /* Back to larger size */
+            height: auto;        /* Let height scale naturally */
             max-width: 100%;
             object-fit: contain;  /* Keeps aspect ratio, prevents distortion */
-            margin: 0 auto 25px; /* Reduced bottom margin */
+            margin: 0 auto 20px; /* Slightly reduced bottom margin */
             display: block;
             flex-shrink: 0;      /* Prevents logo from shrinking */
             animation: fadeInDown 1s ease-out;
@@ -242,19 +242,19 @@
         }
 
         .email-form {
-            margin-bottom: 25px;  /* Reduced from 30px */
+            margin-bottom: 20px;  /* Reduced from 25px */
         }
 
         .email-input {
             width: 100%;
-            padding: 16px 22px;   /* Slightly reduced */
+            padding: 15px 20px;   /* Slightly reduced */
             border: 1px solid rgba(172, 146, 82, 0.3);
             border-radius: 50px;
-            font-size: 0.95rem;   /* Slightly smaller */
+            font-size: 0.9rem;    /* Slightly smaller */
             background: rgba(255, 255, 255, 0.8);
             transition: all 0.4s ease;
             color: #333333;
-            margin-bottom: 18px;  /* Reduced from 20px */
+            margin-bottom: 15px;  /* Reduced from 18px */
             text-align: center;
             font-family: inherit;
         }
@@ -273,12 +273,12 @@
 
         .cta-button {
             width: 100%;
-            padding: 16px 22px;   /* Slightly reduced */
+            padding: 15px 20px;   /* Slightly reduced */
             background: #ac9252;
             color: white;
             border: none;
             border-radius: 50px;
-            font-size: 0.95rem;   /* Slightly smaller */
+            font-size: 0.9rem;    /* Slightly smaller */
             font-weight: 400;
             cursor: pointer;
             transition: all 0.4s ease;
@@ -417,9 +417,9 @@
             }
             
             .logo {
-                width: 120px;         /* Smaller on mobile */
-                height: 50px;         /* Fixed height on mobile */
-                margin-bottom: 20px;  /* Reduced spacing */
+                width: 180px;         /* Larger on mobile too */
+                height: auto;         /* Auto height on mobile */
+                margin-bottom: 18px;  /* Reduced spacing */
             }
             
             .hero {
