@@ -1,4 +1,4 @@
-        }<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -160,11 +160,11 @@
             width: 100%;
             max-width: 500px;
             margin: 0 auto;
-            padding: 35px 30px 25px; /* More top, less bottom padding */
+            padding: 30px;
             text-align: center;
             display: flex;
             flex-direction: column;
-            justify-content: flex-start; /* Start from top instead of center */
+            justify-content: center;
             align-items: center;
             position: relative;
             z-index: 10;
@@ -173,22 +173,20 @@
             backdrop-filter: blur(15px);
             box-shadow: 0 15px 40px rgba(172, 146, 82, 0.15);
             border: 1px solid rgba(255, 255, 255, 0.3);
-            /* Better height management */
-            min-height: 600px;
-            max-height: none; /* Remove max height restriction */
-            height: auto;
+            /* Fixed height to prevent stretching */
+            min-height: 580px;
+            max-height: 650px;
         }
 
-        /* Logo - Account for white space in image */
+        /* Logo - Fixed sizing */
         .logo {
-            width: 230px;        
-            height: auto;        
+            width: 230px;        /* Back to larger size */
+            height: auto;        /* Let height scale naturally */
             max-width: 100%;
-            object-fit: contain;
-            /* Negative margin to pull content up, accounting for logo's white space */
-            margin: -15px auto 10px; /* Negative top margin, smaller bottom margin */
+            object-fit: contain;  /* Keeps aspect ratio, prevents distortion */
+            margin: 0 auto 20px; /* Slightly reduced bottom margin */
             display: block;
-            flex-shrink: 0;      
+            flex-shrink: 0;      /* Prevents logo from shrinking */
             animation: fadeInDown 1s ease-out;
         }
 
@@ -315,11 +313,10 @@
             border: 1px solid rgba(172, 146, 82, 0.2);
         }
 
-        /* Footer - Keep inside container */
+        /* Footer */
         .footer {
-            margin-top: 20px;     
+            margin-top: 20px;     /* Reduced from 25px */
             flex-shrink: 0;
-            width: 100%;          /* Ensure it stays within container */
             animation: fadeInUp 1s ease-out 0.9s both;
         }
 
@@ -341,10 +338,9 @@
 
         .footer-text {
             color: #999;
-            font-size: 0.8rem;    
+            font-size: 0.8rem;    /* Slightly smaller */
             letter-spacing: 1px;
             margin: 0;
-            word-wrap: break-word; /* Prevent text from overflowing */
         }
 
         /* Animations */
@@ -408,23 +404,22 @@
         /* Mobile */
         @media (max-width: 500px) {
             body {
-                padding: 15px 10px; /* Better mobile padding */
+                padding: 10px;
             }
             
             .main-container {
-                padding: 25px 20px 20px; /* Adjusted mobile padding */
-                margin: 0;
+                padding: 20px 18px;
+                margin: 10px 0;
                 background: rgba(255, 255, 255, 0.8);
-                max-width: 95%;      /* Better mobile width */
-                width: 95%;
-                min-height: 550px;   /* Better mobile height */
-                max-height: none;
+                max-width: 90%;
+                min-height: 520px;    /* Adjusted for mobile */
+                max-height: 580px;
             }
             
             .logo {
-                width: 180px;         
-                height: auto;         
-                margin: -10px auto 8px; /* Adjusted for mobile */
+                width: 180px;         /* Larger on mobile too */
+                height: auto;         /* Auto height on mobile */
+                margin-bottom: 18px;  /* Reduced spacing */
             }
             
             .hero {
@@ -539,21 +534,9 @@
             }
         }
 
-        /* Better responsive container sizing */
-        @media (max-width: 600px) {
-            .main-container {
-                max-width: 95%;
-                width: 95%;
-                margin: 0 auto;
-            }
-        }
-
-        @media (max-width: 400px) {
-            .main-container {
-                max-width: 98%;
-                width: 98%;
-                padding: 20px 15px 15px;
-            }
+        /* Hide mobile capsule on desktop */
+        .mobile-capsule {
+            display: none;
         }
     </style>
 </head>
@@ -638,4 +621,3 @@
     </script>
 </body>
 </html>
-
