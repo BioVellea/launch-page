@@ -11,20 +11,25 @@
             box-sizing: border-box;
         }
 
-        body {
-            font-family: 'Georgia', 'Times New Roman', serif;
-            background: linear-gradient(135deg, #f8f6f1 0%, #f2ede3 100%);
-            color: #333333;
-            line-height: 1.4;
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-            overflow: hidden;
-            margin: 0;
-            padding: 20px;
-        }
+       body {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    background: linear-gradient(135deg, #f8f6f1 0%, #f2ede3 100%);
+    color: #333333;
+    line-height: 1.4;
+
+    min-height: 100vh;
+    display: flex;
+    justify-content: flex-start;   /* FIX */
+    align-items: center;           /* horizontal centering only */
+
+    position: relative;
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    margin: 0;
+    padding: 64px 20px 80px;       /* CONTROLLED TOP & BOTTOM */
+}
+
 
         /* Luxury gold capsule visuals */
         .luxury-capsule-left {
@@ -643,6 +648,7 @@
 
 </body>
 </html>
+
 
 
 
