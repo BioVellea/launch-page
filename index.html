@@ -156,27 +156,31 @@
             z-index: 1;
         }
 
-        .main-container {
-            width: 100%;
-            max-width: 500px;
-            margin: 0 auto;
-            padding: 30px;
-            text-align: center;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            position: relative;
-            z-index: 10;
-            background: rgba(255, 255, 255, 0.85);
-            border-radius: 25px;
-            backdrop-filter: blur(15px);
-            box-shadow: 0 15px 40px rgba(172, 146, 82, 0.15);
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            /* Fixed height to prevent stretching */
-            min-height: 580px;
-            max-height: 650px;
-        }
+.main-container {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 42px 30px 36px;   /* controlled top & bottom rhythm */
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;  /* FIX: remove forced vertical centering */
+
+    position: relative;
+    z-index: 10;
+
+    background: rgba(255, 255, 255, 0.85);
+    border-radius: 25px;
+    backdrop-filter: blur(15px);
+    box-shadow: 0 15px 40px rgba(172, 146, 82, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+
+    min-height: auto;          /* FIX */
+    max-height: none;          /* FIX */
+}
+
 
         /* Logo - Fixed sizing */
         .logo {
@@ -204,7 +208,6 @@
             margin-bottom: 18px;  /* Reduced from 20px */
             letter-spacing: 2px;  /* Reduced from 3px */
             line-height: 1.1;
-            white-space: nowrap;
         }
 
         .subtitle {
@@ -417,13 +420,13 @@
             }
             
             .logo {
-                width: 210px;         /* Larger on mobile too */
+                width: 190px;         /* Larger on mobile too */
                 height: auto;         /* Auto height on mobile */
-                margin-bottom: 60px;  /* Reduced spacing */
+                margin-bottom: 30px;  /* Reduced spacing */
             }
             
             .hero {
-                margin-bottom: 30px;  /* Reduced spacing */
+                margin-bottom: 20px;  /* Reduced spacing */
             }
             
             .headline {
@@ -640,6 +643,7 @@
 
 </body>
 </html>
+
 
 
 
