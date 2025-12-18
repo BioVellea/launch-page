@@ -165,13 +165,14 @@
     width: 100%;
     max-width: 500px;
     margin: 0 auto;
-    padding: 42px 30px 36px;   /* controlled top & bottom rhythm */
+
+    padding: 42px 30px 36px;
     text-align: center;
 
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start;  /* FIX: remove forced vertical centering */
+    justify-content: flex-start;
 
     position: relative;
     z-index: 10;
@@ -181,9 +182,6 @@
     backdrop-filter: blur(15px);
     box-shadow: 0 15px 40px rgba(172, 146, 82, 0.15);
     border: 1px solid rgba(255, 255, 255, 0.3);
-
-    min-height: auto;          /* FIX */
-    max-height: none;          /* FIX */
 }
 
 
@@ -410,19 +408,19 @@
         }
 
         /* Mobile */
-        @media (max-width: 500px) {
-            body {
-                padding: 10px;
-            }
-            
-            .main-container {
-                padding: 20px 18px;
-                margin: 10px 0;
-                background: rgba(255, 255, 255, 0.8);
-                max-width: 90%;
-                min-height: 520px;    /* Adjusted for mobile */
-                max-height: 580px;
-            }
+@media (max-width: 500px) {
+    body {
+        padding: 40px 16px 60px;
+        align-items: stretch;
+    }
+
+    .main-container {
+        width: 100%;
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 20px 18px;
+        background: rgba(255, 255, 255, 0.8);
+    }
             
             .logo {
                 width: 180px;         /* Larger on mobile too */
@@ -648,6 +646,7 @@
 
 </body>
 </html>
+
 
 
 
