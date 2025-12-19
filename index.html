@@ -590,39 +590,38 @@
     <div class="new-badge">Launching in the UAE</div>
 </div>
 
-<iframe 
-    name="hidden_iframe" 
-    style="display:none;">
-</iframe>
+<iframe name="hidden_iframe" style="display:none;"></iframe>
+
 
         <div class="email-section">
-           <form 
-    action="https://formsubmit.co/team.biovellea@gmail.com" 
-    method="POST"
-    target="hidden_iframe"
+          <form
     id="emailForm"
     class="email-form"
->
+    action="https://formsubmit.co/team.biovellea@gmail.com"
+    method="POST"
+    target="hidden_iframe"
+  >
 
-    <!-- FormSubmit config -->
+    <!-- REQUIRED -->
     <input type="hidden" name="_captcha" value="false">
     <input type="hidden" name="_template" value="table">
     <input type="hidden" name="_subject" value="BioVellea Early Access Signup">
-    <input type="hidden" name="source" value="Website">
 
-    <!-- Email -->
-    <input 
-        type="email" 
-        name="email" 
-        class="email-input" 
-        placeholder="your email" 
-        required
+    <!-- USER INPUT -->
+    <input
+      type="email"
+      name="email"
+      class="email-input"
+      placeholder="your email"
+      required
     >
 
+    <!-- BUTTON MUST BE INSIDE FORM -->
     <button type="submit" class="cta-button">
-        Get Early Access
+      Get Early Access
     </button>
-</form>
+
+  </form>
 
             
 <p class="form-note">Early access for the UAE launch</p>
@@ -643,20 +642,20 @@ const button = form.querySelector('.cta-button');
 const successMessage = document.getElementById('successMessage');
 
 form.addEventListener('submit', function () {
-    button.textContent = '...';
-    button.disabled = true;
+  button.textContent = '...';
+  button.disabled = true;
 
-    // Delay UX update slightly to ensure submission fires
-    setTimeout(() => {
-        form.style.display = 'none';
-        successMessage.style.display = 'block';
-    }, 600);
+  setTimeout(() => {
+    form.style.display = 'none';
+    successMessage.style.display = 'block';
+  }, 500);
 });
 </script>
 
 
 </body>
 </html>
+
 
 
 
