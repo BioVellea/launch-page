@@ -592,36 +592,32 @@
 
 <iframe name="hidden_iframe" style="display:none;"></iframe>
 
+<form
+  action="https://script.google.com/macros/s/AKfycbykqP17SP4F51c45vnTDBHpYHiUepJ1rk-Orsr1Tu1Hwp6m_Ic5fMUXRKpwFz-9xbDq/exec"
+  method="POST"
+  target="hidden_iframe"
+  id="emailForm"
+  class="email-form"
+>
 
-        <div class="email-section">
-          <form
-    id="emailForm"
-    class="email-form"
-    action="https://formsubmit.co/team.biovellea@gmail.com"
-    method="POST"
-    target="hidden_iframe"
+  <!-- REQUIRED -->
+  <input type="hidden" name="source" value="Website">
+
+  <!-- EMAIL -->
+  <input
+    type="email"
+    name="email"
+    class="email-input"
+    placeholder="your email"
+    required
   >
 
-    <!-- REQUIRED -->
-    <input type="hidden" name="_captcha" value="false">
-    <input type="hidden" name="_template" value="table">
-    <input type="hidden" name="_subject" value="BioVellea Early Access Signup">
+  <button type="submit" class="cta-button">
+    Get Early Access
+  </button>
 
-    <!-- USER INPUT -->
-    <input
-      type="email"
-      name="email"
-      class="email-input"
-      placeholder="your email"
-      required
-    >
+</form>
 
-    <!-- BUTTON MUST BE INSIDE FORM -->
-    <button type="submit" class="cta-button">
-      Get Early Access
-    </button>
-
-  </form>
 
             
 <p class="form-note">Early access for the UAE launch</p>
@@ -658,6 +654,7 @@ form.addEventListener('submit', function () {
 
 </body>
 </html>
+
 
 
 
