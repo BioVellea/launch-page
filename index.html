@@ -642,19 +642,23 @@ const button = form.querySelector('.cta-button');
 const successMessage = document.getElementById('successMessage');
 
 form.addEventListener('submit', function () {
+  // DO NOT stop the form submission
   button.textContent = '...';
   button.disabled = true;
 
+  // Wait long enough for POST to complete
   setTimeout(() => {
     form.style.display = 'none';
     successMessage.style.display = 'block';
-  }, 500);
+  }, 1200); // <-- IMPORTANT (not 500ms)
 });
 </script>
 
 
+
 </body>
 </html>
+
 
 
 
